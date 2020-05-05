@@ -33,11 +33,11 @@ namespace FindMaximumTask.Tests
         [Test]
         public void FindMaximum_Throw_ArgumentNullException_If_Array_Is_Null() =>
             Assert.Throws<ArgumentNullException>(() => FindMaximum(null),
-                message: "array can not be null.");
+                message: "array cannot be null.");
         [Test]
         public void FindMaximum_Throw_ArgumentException_Array_Is_Empty() =>
             Assert.Throws<ArgumentException>(() => FindMaximum(new int[] { }),
-                message: "array can not be empty.");
+                message: "array cannot be empty.");
         
         [Test]
         [Order(0)]
