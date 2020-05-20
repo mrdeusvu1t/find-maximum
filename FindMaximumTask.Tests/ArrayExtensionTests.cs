@@ -28,21 +28,21 @@ namespace FindMaximumTask.Tests
         [TestCase(new int[] { -50, -25, -20, 0, -500, -100 }, ExpectedResult = 0)]
         [TestCase(new int[] { 0, 0, 0, 0, 0, 0 }, ExpectedResult = 0)]
         [TestCase(new int[] { 0, 1, 0, 0, 0, 0 }, ExpectedResult = 1)]
-        public int FindMaximumItem_Return_Index_Of_Maximum_Element(int[] array) => FindMaximum(array);
+        public int FindMaximumItem_ReturnIndexOfMaximumElement(int[] array) => FindMaximum(array);
 
         [Test]
-        public void FindMaximum_Throw_ArgumentNullException_If_Array_Is_Null() =>
+        public void FindMaximum_ArrayIsNull_ThrowArgumentNullException() =>
             Assert.Throws<ArgumentNullException>(() => FindMaximum(null),
                 message: "array cannot be null.");
         [Test]
-        public void FindMaximum_Throw_ArgumentException_Array_Is_Empty() =>
+        public void FindMaximum_ArrayIsEmpty_ThrowArgumentException() =>
             Assert.Throws<ArgumentException>(() => FindMaximum(new int[] { }),
                 message: "array cannot be empty.");
         
         [Test]
         [Order(0)]
         [Timeout(10_000)]
-        public void FindMaximum_Test_For_Large_Array()
+        public void FindMaximum_TestForLargeArray()
         {
             int expected = _max;
             int actual = FindMaximum(_array);
