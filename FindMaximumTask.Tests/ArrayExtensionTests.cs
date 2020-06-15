@@ -28,7 +28,7 @@ namespace FindMaximumTask.Tests
         [TestCase(new int[] { -50, -25, -20, 0, -500, -100 }, ExpectedResult = 0)]
         [TestCase(new int[] { 0, 0, 0, 0, 0, 0 }, ExpectedResult = 0)]
         [TestCase(new int[] { 0, 1, 0, 0, 0, 0 }, ExpectedResult = 1)]
-        public int FindMaximumItem_ReturnIndexOfMaximumElement(int[] array) => FindMaximum(array);
+        public int FindMaximumItem_ReturnMaximumElement(int[] array) => FindMaximum(array);
 
         [Test]
         public void FindMaximum_ArrayIsNull_ThrowArgumentNullException() =>
