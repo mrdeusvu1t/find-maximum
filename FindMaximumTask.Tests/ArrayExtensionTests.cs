@@ -13,7 +13,7 @@ namespace FindMaximumTask.Tests
         [SetUp]
         public void Setup()
         {
-            _max = 100_000_000;
+            _max = 10_000_000;
             _array = Enumerable.Range(1, _max).ToArray();
         }
         
@@ -41,7 +41,7 @@ namespace FindMaximumTask.Tests
         
         [Test]
         [Order(0)]
-        [Timeout(10_000)]
+        [Timeout(5_000)]
         public void FindMaximum_TestForLargeArray()
         {
             int expected = _max;
