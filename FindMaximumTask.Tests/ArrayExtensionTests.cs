@@ -19,7 +19,7 @@ namespace FindMaximumTask.Tests
             this.array = Enumerable.Range(1, this.max).ToArray();
         }
 
-        [Order(2)]
+        [Order(3)]
         [TestCase(new int[] { 0, 50 }, ExpectedResult = 50)]
         [TestCase(new int[] { 100 }, ExpectedResult = 100)]
         [TestCase(new int[] { int.MaxValue, int.MaxValue, int.MinValue, 50 }, ExpectedResult = int.MaxValue)]
@@ -41,7 +41,7 @@ namespace FindMaximumTask.Tests
             Assert.Throws<ArgumentException>(() => FindMaximum(Array.Empty<int>()), message: "source cannot be empty.");
 
         [Test]
-        [Order(0)]
+        [Order(1)]
         [Timeout(5_000)]
         public void FindMaximum_TestForLargeArray()
         {
@@ -50,7 +50,7 @@ namespace FindMaximumTask.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [Order(3)]
+        [Order(2)]
         [TestCase(new int[] { 0, 50 }, ExpectedResult = 50)]
         [TestCase(new int[] { 100 }, ExpectedResult = 100)]
         [TestCase(new int[] { int.MaxValue, int.MaxValue, int.MinValue, 50 }, ExpectedResult = int.MaxValue)]
@@ -72,7 +72,7 @@ namespace FindMaximumTask.Tests
             Assert.Throws<ArgumentException>(() => FindMaximumRecursively(Array.Empty<int>()), message: "source cannot be empty.");
 
         [Test]
-        [Order(1)]
+        [Order(0)]
         [Timeout(5_000)]
         public void FindMaximumRecursively_TestForLargeArray()
         {
