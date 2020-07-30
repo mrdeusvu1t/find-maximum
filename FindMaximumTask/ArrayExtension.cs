@@ -16,7 +16,7 @@ namespace FindMaximumTask
         /// <exception cref="ArgumentException">Thrown when array is empty.</exception>
         public static int FindMaximum(int[] array)
         {
-            throw new NotImplementedException("You need to implement this function.");
+            throw new NotImplementedException("You need to implement this method.");
         }
         
         /// <summary>
@@ -28,7 +28,7 @@ namespace FindMaximumTask
         /// <exception cref="ArgumentException">Thrown when array is empty.</exception>
         public static int FindMaximumRecursively(int[] array)
         {
-            throw new NotImplementedException("You need to implement this function.");
+            throw new NotImplementedException("You need to implement this method.");
         }
     }
 }
