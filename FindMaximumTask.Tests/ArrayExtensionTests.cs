@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using NUnit.Framework;
 using static FindMaximumTask.ArrayExtension;
@@ -61,7 +61,7 @@ namespace FindMaximumTask.Tests
         [TestCase(new int[] { -50, -25, -20, 0, -500, -100 }, ExpectedResult = 0)]
         [TestCase(new int[] { 0, 0, 0, 0, 0, 0 }, ExpectedResult = 0)]
         [TestCase(new int[] { 0, 1, 0, 0, 0, 0 }, ExpectedResult = 1)]
-        public int FindMaximumRecursively_ReturnMaximumElement(int[] source) => FindMaximum(source);
+        public int FindMaximumRecursively_ReturnMaximumElement(int[] source) => FindMaximumRecursively(source);
 
         [Test]
         public void FindMaximumRecursively_ArrayIsNull_ThrowArgumentNullException() =>
