@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace FindMaximumTask
 {
@@ -16,7 +16,27 @@ namespace FindMaximumTask
         /// <exception cref="ArgumentException">Thrown when array is empty.</exception>
         public static int FindMaximum(int[] array)
         {
-            throw new NotImplementedException("You need to implement this method.");
+            if (array is null)
+            {
+                throw new ArgumentNullException("error");
+            }
+
+            if (array.Length == 0)
+            {
+                throw new ArgumentException("errpr");
+            }
+
+            var max = array[0];
+            
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > max)
+                {
+                    max = array[i];
+                }
+            }
+
+            return max;
         }
     }
 }
